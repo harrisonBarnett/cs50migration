@@ -1,0 +1,24 @@
+
+
+sort1: bubble sort?
+
+    random5k: .063
+    random10k: .469
+    
+    sorted5k: .010
+    sorted10k: .020
+    
+    reversed5k: .057
+    reversed10K; .402
+    
+sort2: merge sort?
+
+    random5k: .011
+    sorted5k: 0.11
+    reversed5k: 0.11
+    
+sort2: selection sort?
+
+    random5k: .033
+    sorted5k: .033
+    reversed5k: .033

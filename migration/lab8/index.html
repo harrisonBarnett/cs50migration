@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function() {
+                // multiple choice logic
+
+                // Q1
+                // change button color to green, display "correct!" upon correct button click
+                let correct = document.querySelector(".correct1");
+                correct.addEventListener("click", function() {
+                    correct.style.backgroundColor = "green";
+                    multipleChoice1.innerHTML = "correct!";
+                });
+                // change button color to red, display "incorrect!" upon incorrect button click
+                let incorrects = document.querySelectorAll(".incorrect");
+                for(let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener("click", function() {
+                        incorrects[i].style.backgroundColor = "red";
+                        multipleChoice1.innerHTML = "incorrect!"
+                    });
+                }
+
+                //Q2
+                let correct2 = document.querySelector(".correct2");
+                correct2.addEventListener("click", function() {
+                    correct2.style.backgroundColor = "green";
+                    multipleChoice2.innerHTML = "correct!";
+                });
+                let incorrects2 = document.querySelectorAll(".incorrect2");
+                for(let i = 0; i < incorrects2.length; i++) {
+                    incorrects2[i].addEventListener("click", function() {
+                        incorrects2[i].style.backgroundColor = "red";
+                        multipleChoice2.innerHTML = "incorrect!";
+                    });
+                }
+
+                // open question logic
+
+                // Q3
+                // listen for "submit" click for open question
+                document.querySelector("#submit").addEventListener("click", function() {
+                    let input = document.querySelector("input");
+                    if (input.value.toLowerCase() == "mockingbird") {
+                        input.style.backgroundColor = "green";
+                        openQuestion.innerHTML = "correct!";
+                    } else {
+                        input.style.backgroundColor = "red";
+                        openQuestion.innerHTML = "incorrect!";
+                    }
+                })
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                    <!-- Q1 -->
+                    <h3>Question 1: What is the capitol of Iowa?</h3>
+
+                        <button class="correct1">Des Moines</button>
+                        <button class="incorrect">Boise</button>
+                        <button class="incorrect">Kalamazoo</button>
+                        <button class="incorrect">Walla Walla</button>
+
+                        <p id="multipleChoice1"></p>
+
+                    <!--Q2-->
+                    <h3>Question 2: What is the velocity of an unladen European swallow?</h3>
+
+                        <button class="incorrect2">35 mph</button>
+                        <button class="incorrect2">48 mph</button>
+                        <button class="correct2">24 mph</button>
+                        <button class="incorrect2">90 mph</button>
+
+                        <p id="multipleChoice2"></p>
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <!--Q3-->
+                <h3>What is the state bird of Florida?</h3>
+                <input type="text"></input>
+                <button id="submit">Submit</button>
+
+                <p id="openQuestion"></p>
+
+
+            </div>
+
+        </div>
+    </body>
+</html>

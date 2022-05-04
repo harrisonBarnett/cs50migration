@@ -1,0 +1,118 @@
+/* site style */
+body {
+    color: white;
+}
+body {
+    background: black;
+}
+
+/* index.html styles */
+.interestsRedirect {
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+.booboxRedirect {
+    position: relative;
+    top: 400px;
+    left: 120px;
+}
+#ohHi{
+    position: relative;
+    left: 25px;
+}
+#doYouLike {
+    position: relative;
+    left: 300px;
+}
+#wouldYouLike {
+    position: relative;
+    left: 100px;
+}
+
+/* interest.html */
+/* image sizes */
+.interest {
+    height: 150px;
+    width: 150px;
+}
+#bug {
+    height: 150px;
+    width: 150px;
+}
+#punk {
+    height: 100px;
+    width: 100px;
+}
+
+/*block positions*/
+#shrimpBlock {
+    position: relative;
+    left: 300px;
+}
+#paulieBlock {
+    position: relative;
+    left: 50px;
+}
+#columboBlock {
+    position: relative;
+    left: 450px;
+}
+#bugBlock {
+    position: relative;
+    left: 150px;
+}
+#punkBlock {
+    position: relative;
+    left: 600px;
+}
+#redirectDiv {
+    position: relative;
+    left: 400px;
+    top: -120px;
+}
+
+/*coward.html*/
+#doYouThink {
+    position: relative;
+    left: 200px;
+
+}
+#canYouTaste {
+    position: relative;
+    left: 100px;
+    top: 300px;
+}
+#braveYes {
+    position: relative;
+    left: 125px;
+    top: 300px;
+}
+#braveNo {
+    position: relative;
+    left: 200px;
+    top: 300px;
+}
+#runaway {
+    position: relative;
+    left: 600px;
+    top: 400px;
+}
+/*table.html*/
+#video {
+    position: relative;
+    top: 50px;
+    left: 150px;
+}
+table, th, td {
+    border: 1px solid white;
+}
+#daftPunkTable {
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+#returnHome {
+    position: relative;
+    top: 300px;
+}

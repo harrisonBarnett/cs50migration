@@ -1,0 +1,18 @@
+sort1 uses: bubble sort
+    
+How do you know?: the algorithm is fastest when the items are sorted, which tells me that the algorithm is iterating through 
+    the list to check its pairs and terminates when it reaches the end and finds that the list is already sorted. becuase it 
+    sorts from low to high, it treats the list sorted in reverse the same as a random list, as it has to iterate through the 
+    list until the numbers are sorted low to high. 
+
+sort2 uses: merge sort
+    
+How do you know?: this algorithm is by far the fastest of the three and is equally as capable when sorting a list arranged
+    randomly, sorted low-to-high or sorted high-to-low. it suggests an upper bound and lower bound of (n log n) when compared
+    to the runtime of the remaining sorting algorithm sort3.
+
+sort3 uses: selection sort
+
+How do you know?: like the above algorithm, this sorting method is equally as capable when sorting a list arrange randomly,
+    sorted low-to-high or sorted high-to-low. it suggests an upper bound and lower bound of (n^2) when compared to the
+    runtime of the above sorting algorithm sort2. 

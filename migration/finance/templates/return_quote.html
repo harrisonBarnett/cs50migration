@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Returned Quote
+{% endblock %}
+
+{% block main %}
+
+    <table class="quote_table">
+        <tr>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Symbol</th>
+        </tr>
+
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ price }}</td>
+            <td>{{ symbol }}</td>
+        </tr>
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    At A Glance
+{% endblock %}
+
+{% block main %}
+
+    <h1>Your Holdings</h1>
+    <h2>At A Glance</h2>
+
+    <table class="at_a_glance">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Shares Owned</th>
+            <th>Holding Value</th>
+        </tr>
+        {% for stock in stocks%}
+            {% if total_shares(stock.symbol) > 0 %}
+                <tr>
+                    <td>{{ stock.symbol.upper() }}</td>
+                    <td>{{ lookup(stock.symbol).name }}</td>
+                    <td>{{ lookup(stock.symbol).price | usd }}</td>
+                    <td>{{ total_shares(stock.symbol) }}</td>
+                    <td>{{ (lookup(stock.symbol).price * total_shares(stock.symbol)) | usd }}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+
+    </table>
+
+    <table class="cash_table">
+        <tr>
+            <th>Cash On Hand</th>
+            <th>Net Value</th>
+        </tr>
+        <tr>
+            <td>{{ cash }}</td>
+            <td>{{ net_value() }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

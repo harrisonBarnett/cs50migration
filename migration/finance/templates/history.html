@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1>Your Transaction History</h1>
+    <table class="quote_table">
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>amount</th>
+            <th>Action</th>
+        </tr>
+
+        {% for stock in stocks %}
+            <tr>
+                <td> {{ stock.date }} </td>
+                <td> {{ stock.time }} </td>
+                <td> {{ stock.symbol.upper() }} </td>
+                <td> {{ stock.price | usd }} </td>
+                <td> {{ stock.volume }}</td>
+                <td> {{ stock.type }} </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}

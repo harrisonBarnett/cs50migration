@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <!--stylesheet-->
+        <link href="styles.css" rel="stylesheet">
+        <title>lookit</title>
+
+        <script> // bug squish/redirect logic
+            function imgChange(){
+                document.getElementById("bug").src="https://i.imgur.com/KRYiJjq.png";
+                document.getElementById("bug").title=":(";
+                document.getElementById("bugSubtext").innerHTML = "what have you done.";
+                document.getElementById("redirectDiv").style.display="block";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>what on earth am i doing</h1>
+        <ul>
+            <li>shrimp</li>
+            <li>cooking that good italian food</li>
+            <li>seascapes, columbo, etcetera</li>
+            <li>i'm practically swimming in it, baby</li>
+        </ul>
+        <div id="shrimpBlock">
+            <p>click to learn about shrimp</p>
+            <!--insert shrimp img w/href to shrimp.ytmnd.com-->
+            <a href="https://www.theshrimpfarm.com">
+                <img id="shrimo" class="interest" src="https://i.imgur.com/GyizqqT.png" title="an shrimo"/>
+            </a>
+        </div>
+        <div id="paulieBlock">
+            <p>mama mia</p>
+            <!-- insert pauly walnuts img w/href to visititaly.eu -->
+            <a href="https://www.visititaly.eu">
+                <img id="paulie" class="interest" src="https://i.imgur.com/teRCt8u.png" title="paulie walnuts"/>
+            </a>
+        </div>
+        <div id="columboBlock">
+            <p>Welcome to MeTV! America's #1 Classic Television Network</p>
+            <!-- insert columbo img w/href to metv.com/shows/columbo -->
+            <a href="https://www.metv.com/shows/columbo">
+                <img id="columbo" class="interest" src="https://i.imgur.com/uYM9m6K.png" title="just one more thing"/>
+            </a>
+        </div>
+        <div id="bugBlock">
+            <p>don't click this. do not click it.</p>
+            <!-- insert img of live bug -->
+            <img id="bug" class="bug" src="https://i.imgur.com/UeC7Pos.png" title=":)"
+                onclick="imgChange()"/>
+            <!-- script makes live bug disappear and dead bug appear onclick -->
+            <!-- script makes redirect button appear under bug -->
+            <p id=bugSubtext></p>
+        </div>
+        <!-- redirects to index -->
+        <div id="redirectDiv" style="display:none;">
+            <form action="/pset8/homepage/coward.html">
+                <input class="redirectDiv" type="submit" value="live with your shame"/>
+            </form>
+        </div>
+
+        <div id="punkBlock">
+            <a href="/pset8/homepage/table.html">
+                <img id="punk" src="https://i.imgur.com/YBqSNKy.png" title="oh yeah"/>
+            </a>
+            <p>let's boogie.</p>
+        </div>
+    </body>
+</html>
